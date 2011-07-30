@@ -95,6 +95,9 @@ class AggressiveCompile(cacheDirectory: File)
 		val scalaMsg = Util.counted("Scala source", "", "s", scalaCount)
 		val javaMsg = Util.counted("Java source", "", "s", javaCount)
 		val combined = scalaMsg ++ javaMsg
+        log.info("")
+        log.info("--------------------------------------------------------------")
+        log.info("")
 		if(!combined.isEmpty)
 			log.info(combined.mkString("Compiling ", " and ", " to " + out.getAbsolutePath + "..."))
 	}
